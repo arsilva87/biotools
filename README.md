@@ -56,8 +56,8 @@ cluster 4  7.070493  4.156222  8.019206  2.324152  4.043741  8.484307
 cluster 5  8.816863  3.476651 11.787861  4.043741  0.000000  5.441962
 cluster 6  3.045773  3.560654  6.596850  8.484307  5.441962  0.000000
 
-cof <- cophenetic(toc)
+cof <- cophenetic(toc)  # cophenetic matrix
 
-cor(cof, garlicdist)
+cor(cof, garlicdist)  # cophenetic correlation coefficient
 [1] 0.9086886
 ```
