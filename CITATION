@@ -1,0 +1,19 @@
+citHeader("To cite 'biotools' in publications use:")
+
+citEntry(entry="Article",
+	title = "biotools: an R function to predict spatial gene diversity via an individual-based approach",
+      author = personList(as.person("A. R. da Silva"), 
+	as.person("G. Malafaia"),
+         as.person("I. P. P. de Menezes")),
+	journal = "Genetics and Molecular Research",
+  	year = "2017",
+	volume = "16",
+	pages = "gmr16029655",       
+        textVersion = 
+        paste("da Silva, A.R.; Malafaia, G.; Menezes, I.P.P. ",
+	       "(2017) ", 
+               "biotools: an R function to predict spatial gene diversity via an individual-based approach. ",
+               "Genetics and Molecular Research, ",
+               "16: gmr16029655.",
+               sep="")
+         )

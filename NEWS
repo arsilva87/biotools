@@ -1,0 +1,72 @@
+------------------------------------------------
+                version 3.1
+
+* Documentation fixes
+* Side effect of fitplotsize() wiped out
+* New reference for package citation()
+
+------------------------------------------------
+                version 3.0
+
+* Documentation fixes
+* new function: sHe(), for spatial analysis of gene diversity
+* new data sets: moco, brazil
+
+------------------------------------------------
+                version 2.2
+
+* Documentation fixes
+* new function: gencovtest(), for testing genetic 
+	component of covariance
+* new data set: maize
+* S3 method for the class tocher
+* Output upgrade and new detailed print method for tocher()
+* coph.tocher() was replaced by a cophenetic method for
+	objects of class "tocher"
+* S3 method for the class "singh"
+* The argument graph was dropped from singh();
+	a plot method is available
+* S3 method for the class "D2.disc"
+* Print method for D2.disc
+
+------------------------------------------------
+                version 2.1
+
+* Documentation fixes
+* new functions: mantelTest(), mantelPower()
+* new graphical output for samplesize()
+* new algorithm (sequential) for tocher()
+
+------------------------------------------------
+                version 2.0
+
+* Documentation fixes
+* S3 predict method for class 'D2.disc'
+* new output for tocher()
+* bug fixed in boxM()
+* new function: cov2pcov()
+
+------------------------------------------------
+                version 1.2
+
+* Documentation fixes
+* S3 print method for classes: 'boxM', 'creategroups', 
+	'pathanalysis', 'singh' and 'tocher'
+* New functions: multcor.test(), findSubsample() and 
+	D2.disc()
+
+------------------------------------------------
+                version 1.1
+
+* Documentation fixes
+* New functions: raise.matrix() and samplesize()
+
+------------------------------------------------
+                version 1.0
+
+* First version released on CRAN
+
+
+
+
+

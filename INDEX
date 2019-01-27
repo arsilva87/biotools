@@ -1,0 +1,31 @@
+D2.disc                 Discriminant Analysis Based on Mahalanobis
+                        Distance
+D2.dist                 Pairwise Squared Generalized Mahalanobis
+                        Distances
+aer                     Apparent Error Rate
+biotools-package        Tools for Biometry and Applied Statistics in
+                        Agricultural Science
+boxM                    Box's M-test
+brazil                  Brazil Grid
+confusionmatrix         Confusion Matrix
+cov2pcov                Partial Covariance Matrix
+creategroups            Creating Homogeneous Groups
+distClust               Cluster Distance Matrix
+findSubsample           Finding an Optimized Subsample
+fitplotsize             Parameter Estimation of the Plot Size Model
+garlicdist              Distances Between Garlic Cultivars
+gencovtest              Testing Genetic Covariance
+maize                   Maize Data
+mantelPower             Power of Mantel's Test
+mantelTest              Mantel's Permutation Test
+moco                    Moco Cotton Data
+multcor.test            Pairwise Correlation t-Test
+optimumplotsize         Maximum Curvature Point for Optimum Plot Size
+pathanalysis            Path Analysis, Simple and Under Collinearity
+peppercorr              Correlations Between Pepper Variables
+raise.matrix            Raising a Square Matrix to a Power
+sHe                     Spatial Analysis of Gene Diversity
+samplesize              Minimum Sample Size
+singh                   Importance of Variables According to the Singh
+                        (1981) Criterion
+tocher                  Tocher's Clustering
