@@ -7,7 +7,7 @@ LazyLoad: yes
 LazyData: yes
 Author: Anderson Rodrigo da Silva
 Maintainer: Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
-Depends: rpanel, tkrplot, MASS, lattice, SpatialEpi
+Depends: MASS, lattice, SpatialEpi
 Imports: utils, stats, graphics, boot, grDevices, datasets
 Suggests: soilphysics
 Description: Tools designed to perform and work with cluster analysis (including Tocher's algorithm), 
