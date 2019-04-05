@@ -1,6 +1,7 @@
 Package: biotools
 Type: Package
-Title: Tools for Biometry and Applied Statistics in Agricultural Science
+Title: Tools for Biometry and Applied Statistics in Agricultural
+        Science
 Version: 5.0
 Date: 2019-01-29
 LazyLoad: yes
@@ -9,7 +10,7 @@ Author: Anderson Rodrigo da Silva
 Maintainer: Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 Depends: MASS, lattice, SpatialEpi
 Imports: utils, stats, graphics, boot, grDevices, datasets
-Suggests: soilphysics
+Suggests: soilphysics, testthat
 Description: Tools designed to perform and work with cluster analysis (including Tocher's algorithm), 
 	discriminant analysis and path analysis (standard and under collinearity), as well as some 
 	useful miscellaneous tools for dealing with sample size and optimum plot size calculations.
@@ -17,3 +18,5 @@ Description: Tools designed to perform and work with cluster analysis (including
 	power is implemented. biotools also contains the new tests for genetic covariance components.
 	An approach for predicting spatial gene diversity is implemented.
 License: GPL (>= 2)
+NeedsCompilation: no
+Packaged: 2019-04-05 18:37:29 UTC; ander

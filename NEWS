@@ -3,6 +3,7 @@
 
 * Documentation fixes
 * New reference for package citation()
+* Old dependencies on rpanel and tkrplot removed
 ------------------------------------------------
                 version 3.1
 
