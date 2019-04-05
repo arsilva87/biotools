@@ -23,7 +23,7 @@ export(tocher)
 export(sHe)
 
 # Imports
-import(utils, rpanel, tkrplot, MASS, boot, stats, graphics, grDevices, datasets, lattice, SpatialEpi)
+import(utils, MASS, boot, stats, graphics, grDevices, datasets, lattice, SpatialEpi)
 
 # S3methods
 S3method(tocher, dist)
