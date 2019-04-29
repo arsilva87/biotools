@@ -4,10 +4,10 @@ Tools designed to perform and work with cluster analysis (including Tocher's alg
 
 # Instalation
 
-You can install and load the released version of biotools from CRAN with:
+You can install and load the released version of biotools from GitHub with:
 
 ```r
-install.packages("biotools")
+devtools::install_github("arsilva87/biotools")
 
 library(biotools)
 ```
