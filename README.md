@@ -2,6 +2,8 @@
 
 Tools designed to perform and work with cluster analysis (including Tocher's algorithm), as well as some useful miscellaneous tools for evaluating clustering outcomes, such as a specific coefficient of cophenetic correlation, discriminant analysis, the Box'M test and the Mantel's permutation test. A new approach for calculating the power of Mantel's test is implemented. biotools also contains the new tests for genetic covariance components. An approach for predicting spatial gene diversity is implemented. Some of the main tools are described in the next sections.
 
+Target audience: agronomists, biologists and researches of related fields.
+
 # Importance of variables: Singh's criterion
 
 The function singh() runs the method proposed by Singh (1981) for determining the importance of variables based on the squared generalized Mahalanobis distance. In his approach, the importance of the j-th variable (j = 1, 2, ..., p) on the calculation of the distance matrix can be obtained by:
