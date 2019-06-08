@@ -36,7 +36,7 @@ The approach presented by Silva (2013) is implemented by taking the cluster dist
 
 # Box's M-test
 
-When clusters are formed, one might be interested in verifying if covariance matrices of the clusters can be considered homogeneous, especially if one intends to perform a linear discriminant analysis using a pooled matrix. In this case, the well known Box's M-test can be applied. The function boxM() performs the test using an approximation of the ![](https://latex.codecogs.com/gif.latex?chi_%7B%5Cnu%7D%5E2) distribution, where ![](https://latex.codecogs.com/gif.latex?%5Cnu%20%3D%20%5Cfrac%7B1%7D%7B2%7D%20p%28p&plus;1%29%28k-1%29), and k is the number of covariance matrices. Users should be aware that all clusters must have a positive definite covariance matrix.
+When clusters are formed, one might be interested in verifying if covariance matrices of the clusters can be considered homogeneous, especially if one intends to perform a linear discriminant analysis using a pooled matrix. In this case, the well known Box's M-test can be applied. The function boxM() performs the test using an approximation of the ![](https://latex.codecogs.com/gif.latex?\chi_%7B%5Cnu%7D%5E2) distribution, where ![](https://latex.codecogs.com/gif.latex?%5Cnu%20%3D%20%5Cfrac%7B1%7D%7B2%7D%20p%28p&plus;1%29%28k-1%29), and k is the number of covariance matrices. Users should be aware that all clusters must have a positive definite covariance matrix.
 
 # Discriminant analysis based on Mahalanobis distance
 
