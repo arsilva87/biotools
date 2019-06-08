@@ -58,6 +58,8 @@ library(biotools)
 
 # Example of Tocher's clustering
 
+Seventeen garlic genotypes from a Germoplasm Bank were evaluated in terms of agronomic variables in order to obtain contasting clusters and to eliminate replicates. A matrix containing the Generalized Mahalanobis distances among genotypes is given in 'garlicdist'. Tocher's method is applied to determine clusters.
+
 ```r
 data(garlicdist)
 
