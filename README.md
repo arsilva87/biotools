@@ -2,7 +2,7 @@
 
 Tools designed to perform and work with cluster analysis (including Tocher's algorithm), as well as some useful miscellaneous tools for evaluating clustering outcomes, such as a specific coefficient of cophenetic correlation, discriminant analysis, the Box'M test and the Mantel's permutation test. A new approach for calculating the power of Mantel's test is implemented. biotools also contains the new tests for genetic covariance components. An approach for predicting spatial gene diversity is implemented. Some of the main tools are described in the next sections.
 
-Target audience: agronomists, biologists and researches of related fields.
+Target audience: agronomists, biologists and researchers of related fields.
 
 # Importance of variables: Singh's criterion
 
