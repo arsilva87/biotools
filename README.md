@@ -1,10 +1,12 @@
 # biotools
 
-Tools designed to perform and work with cluster analysis (including Tocher's algorithm), discriminant analysis and path analysis (standard and under collinearity), as well as some useful miscellaneous tools for dealing with sample size and optimum plot size calculations. Mantel's permutation test can be found in this package. A new approach for calculating its power is implemented. biotools also contains the new tests for genetic covariance components. An approach for predicting spatial gene diversity is implemented. Some of the main tools are described here.
+Tools designed to perform and work with cluster analysis (including Tocher's algorithm), discriminant analysis and path analysis (standard and under collinearity), as well as some useful miscellaneous tools for dealing with sample size and optimum plot size calculations. Mantel's permutation test can be found in this package. A new approach for calculating its power is implemented. biotools also contains the new tests for genetic covariance components. An approach for predicting spatial gene diversity is implemented. Some of the main tools are described in the next sections.
 
 # Importance of variables: Singh's criterion
 
 We have implemented in the function singh() the method proposed by Singh (1981) for determining the importance of variables based on the squared generalized Mahalanobis distance. In his approach, the importance of the $j$-th variable ($j = 1, 2, ..., p$) on the calculation of the distance matrix can be obtained by:
+
+![](\sum_{i=1})
 
 \begin{equation}
 	S_{.j} = \sum_{i=1}^{n-1} \sum_{i'>i}^{n} (x_{ij} - x_{i'j}) ({\bf x}_i - {\bf x}_{i'})^T \mat{\Sigma}_{.j}^{-1} 
