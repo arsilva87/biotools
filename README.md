@@ -6,7 +6,7 @@ Tools designed to perform and work with cluster analysis (including Tocher's alg
 
 We have implemented in the function singh() the method proposed by Singh (1981) for determining the importance of variables based on the squared generalized Mahalanobis distance. In his approach, the importance of the $j$-th variable ($j = 1, 2, ..., p$) on the calculation of the distance matrix can be obtained by:
 
-![](\sum_{i=1})
+Let $\sum_{i=1}$
 
 \begin{equation}
 	S_{.j} = \sum_{i=1}^{n-1} \sum_{i'>i}^{n} (x_{ij} - x_{i'j}) ({\bf x}_i - {\bf x}_{i'})^T \mat{\Sigma}_{.j}^{-1} 
