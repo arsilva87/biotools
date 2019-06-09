@@ -109,5 +109,5 @@ cor(cof, garlicdist)  # cophenetic correlation coefficient
 ```
 
 # Report a bug
-Reach out directly by ![e-mail](malito:anderson.silva@ifgoiano.edu.br)
+Reach out directly by e-mail: anderson.silva@ifgoiano.edu.br
 
