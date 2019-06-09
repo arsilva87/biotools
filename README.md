@@ -4,7 +4,7 @@ Tools designed to perform and work with cluster analysis (including Tocher's alg
 
 Target audience: agronomists, biologists and researchers of related fields.
 
-# Importance of variables: Singh's criterion
+## Importance of variables: Singh's criterion
 
 The function singh() runs the method proposed by Singh (1981) for determining the importance of variables based on the squared generalized Mahalanobis distance. In his approach, the importance of the j-th variable (j = 1, 2, ..., p) on the calculation of the distance matrix can be obtained by:
 
