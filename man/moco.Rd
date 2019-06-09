@@ -6,7 +6,7 @@ Moco Cotton Data
 }
 
 \description{
-Data set of...
+Geospatial data of markers of 'Moco' Cotton genotypes over Brazil.
 }
 
 \usage{data("moco")}
@@ -34,14 +34,6 @@ Data set of...
     \item{\code{CIR246.1}}{a numeric vector}
     \item{\code{CIR246.2}}{a numeric vector}
   }
-}
-
-\source{
-...
-}
-
-\references{
-...
 }
 
 \examples{
