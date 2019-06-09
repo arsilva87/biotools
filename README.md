@@ -107,3 +107,6 @@ cof <- cophenetic(toc)  # cophenetic matrix
 cor(cof, garlicdist)  # cophenetic correlation coefficient
 [1] 0.9086886
 ```
+
+# Report a bug
+Reach out directly by [e-mail](malito:anderson.silva@ifgoiano.edu.br)
