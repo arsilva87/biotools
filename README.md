@@ -14,7 +14,7 @@ The function singh() runs the method proposed by Singh (1981) for determining th
 
 The output of singh() is basically a matrix containing every ![](https://latex.codecogs.com/gif.latex?S_%7B.j%7D) and its relative value.
 
-# Tocher's algorithm
+## Tocher's algorithm
 
 biotools contains the method suggested by K.D. Tocher (Rao 1952) for clustering objects, which consists of an optimization method that follows the algorithm:
 
@@ -26,21 +26,21 @@ biotools contains the method suggested by K.D. Tocher (Rao 1952) for clustering 
 
 The process continues until the last remaining object is evaluated and either included in the last cluster formed or allocated to its own separated cluster. The function tocher() performs optimization clustering and returns an object of class 'tocher', which contains the clusters formed, a numeric vector indicating the cluster of each object, a matrix of cluster distances and also the input, a 'dist' object.
 
-# Cluster distances
+## Cluster distances
 
 After obtaining the clusters, it might be useful to know how divergent they are from each other. In this context, cluster distances are calculated from the original distance matrix through the function distClust(). An intracluster distance is calculated by averaging all pairwise distances among objects in the cluster concerned. Likewise, the distance between two clusters is calculated by averaging all pairwise distances among objects in these clusters.
 
-# Cophenetic correlation
+## Cophenetic correlation
 
 Clustering validation is widely made for hierarchical and iterative methods. Some measures of internal validation for a Tocher's clustering outcome currently implemented on biotools.
 
 The approach presented by Silva (2013) is implemented by taking the cluster distances in order to build a cophenetic matrix for clustering performed through the Tocher's method. Their approach consists of taking the cophenetic distance among objects located in the same cluster as the intracluster distance and the cophenetic distance between objects of different clusters as the intercluster distance. Then, the Pearson's correlation between the elements of the original and cophenetic matrix can be taken as a cophenetic correlation. The function to be called is cophenetic(), whose input is an object of class 'tocher' and its output an object of class 'dist'.
 
-# Box's M-test
+## Box's M-test
 
 When clusters are formed, one might be interested in verifying if covariance matrices of the clusters can be considered homogeneous, especially if one intends to perform a linear discriminant analysis using a pooled matrix. In this case, the well known Box's M-test can be applied. The function boxM() performs the test using an approximation of the ![](https://latex.codecogs.com/gif.latex?\chi_%7B%5Cnu%7D%5E2) distribution, where ![](https://latex.codecogs.com/gif.latex?%5Cnu%20%3D%20%5Cfrac%7B1%7D%7B2%7D%20p%28p&plus;1%29%28k-1%29), and k is the number of covariance matrices. Users should be aware that all clusters must have a positive definite covariance matrix.
 
-# Discriminant analysis based on Mahalanobis distance
+## Discriminant analysis based on Mahalanobis distance
 
 A simple and efficient object classification rule is based on Mahalanobis distance. It consists of calculating the squared generalized Mahalanobis distances of each multivariate observation to the centre of each cluster. biotools performs this sort of discriminant analysis through D2.disc(), as follows: consider ![](https://latex.codecogs.com/gif.latex?D_%7Bij%2C%20j%27%7D%5E2) as the Mahalanobis distance from the i-th (i = 1, 2, ..., n) observation in the j-th (j = 1, 2, ..., k) cluster to the probable j'-th cluster. Now consider ![](https://latex.codecogs.com/gif.latex?C_j) the random variable that represents the cluster at which this observation lies. The predicted class ![](https://latex.codecogs.com/gif.latex?%5Chat%7BC%7D_%7Bj%27%7D) for this concerned observation is the one such that ![](https://latex.codecogs.com/gif.latex?j%27%20%5CRightarrow%20%5Cmin_%7Bj%27%20%3D%201%7D%5E%7Bk%7D%20%28%20D_%7Bij%2C%20j%27%7D%5E2%20%29).
 
