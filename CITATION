@@ -17,19 +17,3 @@ citEntry(entry="Article",
                "16. ", "doi: 10.4238/gmr16029655",
                sep="")
          )
-
-citEntry(entry="Article",
-	title = "biotools: a package for optimization cluster analysis",
-      author = personList(as.person("A. R. da Silva")),
-	journal = "The Journal of Open Source Software",
-  	year = "2019",
-	volume = "4",
-        doi = "10.21105/joss.01212",      
-        textVersion = 
-        paste("da Silva, A.R. ",
-	       "(2019) ", 
-               "biotools: a package for optimization cluster analysis. ",
-               "The Journal of Open Source Software, ",
-               "4. ", "doi: 10.21105/joss.01212",
-               sep="")
-         )
