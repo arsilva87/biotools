@@ -1,4 +1,4 @@
-http://cranlogs.r-pkg.org/badges/biotools
+> ![](http://cranlogs.r-pkg.org/badges/biotools)
 
 # biotools
 
