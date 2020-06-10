@@ -48,7 +48,7 @@ A simple and efficient object classification rule is based on Mahalanobis distan
 
 D2.disc() outputs the Mahalanobis distances from each observation to the centre of each cluster, the pooled covariance matrix for clusters and the confusion matrix, which contains the number of correct classifications in the diagonal cells and misclassifications off-diagonal. In addition, a column misclass indicates (with an asterisk) where there was disagreement between the original classification (grouping) and the predicted one (pred).
 
-# Instalation
+# Installation
 
 You can install and load the released version of biotools from GitHub with:
 
