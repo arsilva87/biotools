@@ -21,8 +21,7 @@ A data frame containing the effect size and its respective power level.
 
 \references{
 Silva, A.R.; Dias, C.T.S.; Cecon, P.R.; Rego, E.R. (2015). An alternative procedure for performing a 
-	power analysis of Mantel's test. \emph{Journal of Applied Statistics}, 
-	doi = \url{10.1080/02664763.2015.1014894}
+	power analysis of Mantel's test. \emph{Journal of Applied Statistics}, \bold{42}(9): 1984-1992.
 }
 
 \author{

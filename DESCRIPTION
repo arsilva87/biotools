@@ -1,22 +1,25 @@
 Package: biotools
 Type: Package
-Title: Tools for Biometry and Applied Statistics in Agricultural
-        Science
-Version: 5.0
-Date: 2019-01-29
+Title: Tools for Biometry and Applied Statistics in Agricultural Science
+Version: 4.0
+Date: 2020-12-04
 LazyLoad: yes
 LazyData: yes
-Author: Anderson Rodrigo da Silva
+Authors@R: c(person(given = c("Anderson", "Rodrigo"),
+             family = "da Silva",
+             role = c("aut", "cre"),
+             email = "anderson.agro@hotmail.com",
+             comment = c(ORCID = "0000-0003-2518-542X")))
+Author: Anderson Rodrigo da Silva [aut, cre] (<https://orcid.org/0000-0003-2518-542X>)
 Maintainer: Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
-Depends: MASS, lattice, SpatialEpi
+Depends: MASS
 Imports: utils, stats, graphics, boot, grDevices, datasets
-Suggests: soilphysics, testthat
-Description: Tools designed to perform and work with cluster analysis (including Tocher's algorithm), 
+Suggests: soilphysics, tkrplot, tcltk, rpanel, lattice, SpatialEpi
+Description: Tools designed to perform and evaluate cluster analysis (including Tocher's algorithm), 
 	discriminant analysis and path analysis (standard and under collinearity), as well as some 
-	useful miscellaneous tools for dealing with sample size and optimum plot size calculations.
-	Mantel's permutation test can be found in this package. A new approach for calculating its
-	power is implemented. biotools also contains the new tests for genetic covariance components.
-	An approach for predicting spatial gene diversity is implemented.
+	useful miscellaneous tools for dealing with sample size and optimum plot size calculations. 
+	A test for seed sample heterogeneity is now available. Mantel's permutation test can be found in this package. 
+	A new approach for calculating its power is implemented. biotools also contains tests for genetic covariance components.
+	Heuristic approaches for performing non-parametric spatial predictions of generic response variables and 
+	spatial gene diversity are implemented.
 License: GPL (>= 2)
-NeedsCompilation: no
-Packaged: 2019-04-05 18:37:29 UTC; ander

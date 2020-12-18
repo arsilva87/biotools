@@ -1,9 +1,10 @@
 ------------------------------------------------
-                version 5.0
+                version 4.0
 
 * Documentation fixes
-* New reference for package citation()
-* Old dependencies on rpanel and tkrplot removed
+* New functions: spatialpred() and germinationcount.test()
+* Packages rpanel and tkrplot were moved to Suggests and used conditionally
+
 ------------------------------------------------
                 version 3.1
 

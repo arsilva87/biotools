@@ -21,9 +21,11 @@ export(samplesize)
 export(singh)
 export(tocher)
 export(sHe)
+export(spatialpred)
+export(germinationcount.test)
 
 # Imports
-import(utils, MASS, boot, stats, graphics, grDevices, datasets, lattice, SpatialEpi)
+import(utils, MASS, boot, stats, graphics, grDevices, datasets)
 
 # S3methods
 S3method(tocher, dist)
@@ -46,3 +48,4 @@ S3method(print, gencovtest)
 S3method(plot, gencovtest)
 S3method(print, sHe)
 S3method(plot, sHe)
+S3method(print, germinationcount.test)
