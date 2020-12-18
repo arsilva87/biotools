@@ -1,6 +1,8 @@
 pathanalysis <-
 function(corMatrix, resp.col, collinearity = FALSE)
 {
+   if (!requireNamespace(c("tcltk", "tkrplot"), quietly = TRUE)) 
+        stop("packages tcltk and tkrplot are required")
    stopifnot(is.matrix(corMatrix))
    if (resp.col < 1 || resp.col > nrow(corMatrix))
       stop("'resp.col' misspecified!")
@@ -48,12 +50,12 @@ function(corMatrix, resp.col, collinearity = FALSE)
          return(pan)
       }
       redraw1 <- function(pan) {
-         rp.tkrreplot(pan, plot)
+         rpanel::rp.tkrreplot(pan, plot)
          pan
       }
       redraw2 <- function(pan) {
-         rp.tkrreplot(pan, plot)
-         rp.slider.change(pan, "slider", pan[["k"]])
+         rpanel::rp.tkrreplot(pan, plot)
+         rpanel::rp.slider.change(pan, "slider", pan[["k"]])
          return(pan)
       }
       f.fit <- function(pan)
@@ -80,12 +82,12 @@ function(corMatrix, resp.col, collinearity = FALSE)
             "\nDeterminant of (X'X + Ik): ", deter, "\n")
          return(pan)
       }
-      panel <- rp.control()
-      rp.tkrplot(panel, plot, draw, pos = "left")
-      rp.slider(panel, k, 0, 1, redraw1, initval = 0.05,
+      panel <- rpanel::rp.control()
+      rpanel::rp.tkrplot(panel, plot, draw, pos = "left")
+      rpanel::rp.slider(panel, k, 0, 1, redraw1, initval = 0.05,
          name = "slider", showvalue = TRUE)
-      rp.doublebutton(panel, k, 0.01, action = redraw2)
-      rp.button(panel, title = "Run", action = f.fit)
+      rpanel::rp.doublebutton(panel, k, 0.01, action = redraw2)
+      rpanel::rp.button(panel, title = "Run", action = f.fit)
    }
 }
 

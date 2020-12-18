@@ -12,6 +12,8 @@ function(x, coord.cols = 1:2, marker.cols = 3:4,
 	marker.type = c("codominant", "dominant"), 
 	grid = NULL, latlong2km = TRUE, radius, nmin = NULL) 
 {
+    if (!requireNamespace(c("tcltk", "SpatialEpi"), quietly = TRUE)) 
+        stop("packages tcltk and SpatialEpi are required")
     if (!inherits(x, c("data.frame", "matrix")))
        stop("'x' must be a data.frame o matrix")
     stopifnot(is.integer(coord.cols))
@@ -22,7 +24,7 @@ function(x, coord.cols = 1:2, marker.cols = 3:4,
     # check coordinate system
     loc. <- as.matrix(x[, coord.cols])
     if (latlong2km) {
-       loc <- as.matrix(latlong2grid(loc.))
+       loc <- as.matrix(SpatialEpi::latlong2grid(loc.))
     } else {
        loc <- loc.
     }
@@ -44,7 +46,7 @@ function(x, coord.cols = 1:2, marker.cols = 3:4,
           y = seq(minmax[1, 2], minmax[2, 2], length.out = 50)) )
     }
     if (latlong2km) {
-       grid <- as.matrix(latlong2grid(grid.))
+       grid <- as.matrix(SpatialEpi::latlong2grid(grid.))
     } else {
        grid <- grid.
     }
@@ -166,7 +168,9 @@ print.sHe <- function(x, ...)
 # plot method (lattice::levelplot)
 plot.sHe <- function(x, ...)
 {
-   levelplot(uHe ~ coord.x*coord.y, data = x$diversity,
+   if (!requireNamespace("lattice", quietly = TRUE)) 
+        stop("package lattice is required")
+   lattice::levelplot(uHe ~ coord.x*coord.y, data = x$diversity,
       col.regions = rev(heat.colors(100)),
       main = "Gene Diversity Heat Map", ...) 
 }
