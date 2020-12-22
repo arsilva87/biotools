@@ -112,4 +112,4 @@ cor(cof, garlicdist)  # cophenetic correlation coefficient
 
 # Contributions and bug reports
 
-biotools is an ongoing project. Then, contributions are very welcome. If you have a question or have found a bug, please open an ![Issue](https://github.com/arsilva87/biotools/issues) or reach out directly by e-mail: anderson.silva@ifgoiano.edu.br.
+**biotools** is an ongoing project. Then, contributions are very welcome. If you have a question or have found a bug, please open an ![Issue](https://github.com/arsilva87/biotools/issues) or reach out directly by e-mail: anderson.silva@ifgoiano.edu.br.
