@@ -23,6 +23,7 @@ export(tocher)
 export(sHe)
 export(spatialpred)
 export(germinationcount.test)
+export(mvpaircomp)
 
 # Imports
 import(utils, MASS, boot, stats, graphics, grDevices, datasets)
@@ -49,3 +50,4 @@ S3method(plot, gencovtest)
 S3method(print, sHe)
 S3method(plot, sHe)
 S3method(print, germinationcount.test)
+S3method(print, mvpaircomp)

@@ -19,8 +19,8 @@ spatial gene diversity are implemented.
 \tabular{ll}{
 Package: \tab biotools\cr
 Type: \tab Package\cr
-Version: \tab 4.0\cr
-Date: \tab 2020-12-04\cr
+Version: \tab 4.1\cr
+Date: \tab 2021-04-07\cr
 License: \tab GPL (>= 2)\cr
 }
 }
@@ -37,8 +37,6 @@ Maintainer: Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 }
 
 \references{
-Cruz, C.D.; Ferreira, F.M.; Pessoni, L.A. (2011) \emph{Biometria aplicada ao estudo da diversidade genetica}. Visconde do Rio Branco: Suprema.
-
 Rao, R.C. (1952) \emph{Advanced statistical methods in biometric research}. New York: John Wiley & Sons.
 
 Sharma, J.R. (2006) \emph{Statistical and biometrical techniques in plant breeding}. Delhi: New Age International.
