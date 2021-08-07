@@ -6,13 +6,13 @@ citEntry(entry="Manual",
          email = "anderson.agro@hotmail.com")
         ),
   	year = "2021",  
-        note = "R package version 4.1",
+        note = "R package version 4.2",
         url = "https://cran.r-project.org/package=biotools",
         key = "biotools-package",
         textVersion = paste("da Silva, A. R. ",
 	       "(2021) ", 
                "biotools: Tools for Biometry and Applied Statistics in Agricultural Science. ",
-               "R package version 4.1. ",
+               "R package version 4.2. ",
                "https://cran.r-project.org/package=biotools",
                sep="")
          )
