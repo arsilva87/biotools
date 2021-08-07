@@ -3,7 +3,7 @@
 ![](https://cranlogs.r-pkg.org/badges/biotools)
 <!-- badges: end -->
 
-<img align="right" src="docs/biotools_logo.svg" width="16%" height="16%">
+<img align="right" src="docs/logo_biotools.png" width="16%" height="16%">
 
 The package **biotools** has been developed for helping biologists, ecologists and researchers of related fields to perform optimization cluster analysis, specifically using Tocher's methods, as well as to evaluate the quality of the clustering. For this last purpose, some new and standard methodologies are supplied: the cophenetic correlation coefficient, Box's M-test for equality of covariance matrices and discriminant analysis based on Mahalanobis distance. These two latter can also be used upon clustering obtained with other methods, including the hierarchical ones.
 
