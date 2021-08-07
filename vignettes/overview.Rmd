@@ -1,0 +1,193 @@
+---
+title: "biotools: an overview"
+author: "Anderson R da Silva"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{biotools: an overview}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+# About
+
+*biotools* has implementations to perform and work with cluster analysis, especially Tocher's method, and tools for evaluating clustering outcomes, such as a specific coefficient of cophenetic correlation, discriminant analysis, the Box'M test and the Mantel's permutation test. A new approach for calculating the power of Mantel's test is implemented. Some of those are illustrated in the next sections.
+
+Target audience: agronomists, biologists and researchers of related fields.
+
+## Installation
+
+You can install the released version on CRAN or the beta version from GitHub:
+
+```{r eval = FALSE}
+install.packages("biotools")
+devtools::install_github("arsilva87/biotools")
+```
+
+Load it:
+```{r}
+library(biotools)
+```
+
+# Multivariate pairwise comparisons
+
+Take the data set `maize` from biotools. They consist of multivariate observations on ears of five maize genotypes (families).
+
+```{r}
+data(maize)
+head(maize)   # firts 6 rows
+```
+
+Let us fit a MANOVA model and test for statistical significance of 'family' using Wilks' lambda.
+
+```{r}
+M <- lm(cbind(NKPR, ED, CD) ~ family, data = maize)
+anova(M, test = "Wilks")
+```
+
+Now, one question is **where** are those differences? To answer that, multiple pairwise tests can be run. The function `mvpaircomp()` allows on to choose between multivariate statistics such as Wilks' lambda, Pillai's trace etc. to perform multiple tests on factor levels a fitted model.
+
+```{r}
+mvpaircomp(M, "family", test = "Wilks", adjust = "bonferroni")
+```
+
+
+## Box's M-test
+
+One requirement of the model fitted earlier is that is residual covariance matrices of the factor levels are homogeneous. Furthermore, in cluster analysis, it might be of interest to check if the covariance matrices of the clusters can be considered equals, especially if one intends to perform a linear discriminant analysis using a pooled matrix.In those cases, the Box's M-test can be applied. The function `boxM()` performs the test using an approximation of the $\chi^2_\nu$ distribution, where $\nu = \frac{p(p+1)(k-1)}{2}$, $p$ is the number of variables and $k$ is the number of levels. 
+
+Users should be aware that all clusters must have a positive definite covariance matrix. If there is any cluster/level containing fewer observations (rows) than the number of variables (columns), then its covariance matrix is probably not positive definite.
+
+```{r}
+res <- residuals(M)
+boxM(data = res, grouping = maize$family)
+```
+
+
+# Importance of variables: the Singh's criterion
+
+The function singh() runs the method proposed by Singh (1981) for determining the importance of variables based on the squared generalized Mahalanobis distance. In his approach, the importance of the $j$-th variable ($j = 1, 2, ..., p$) on the calculation of the distance matrix can be obtained by:
+
+\[
+	S_{.j} = \sum_{i=1}^{n-1} \sum_{i'>i}^{n} (x_{ij} - x_{i'j}) ({\bf x}_i - {\bf x}_{i'})^T {\Sigma}_{.j}^{-1} 
+\]
+
+\noindent where $x_{ij}$ and $x_{i'j}$ are the observation taken at the $i$-th and $i'$-th objects (individuals) for the $j$-th variable, ${\bf x}_i$ is the $p$-variate vector of the $i$-th object and ${\Sigma}_{.j}^{-1}$ is the $j$-th column of the inverse of the covariance matrix.
+
+Since $S_{.j}$ is itself a measure of distance, it can be more appropriate to take the following proportion instead:
+
+\[
+		\frac{S_{.j}} {\sum_{j=1}^{p} S_{.j}} \in [0, 1]
+\]
+
+\noindent with the constraint $\sum_{j=1}^{p} S_{.j} = \sum_{i=1}^{n-1} \sum_{i'>i}^{n} D_{ii'}^2$. 
+
+Using the proportion enable us to determine the relative importance of each variable.
+
+### Example
+Using the residual covariance of the fitted MANOVA model, let us calculate the importance of the three variables to discriminating observations.
+
+```{r}
+s <- singh(data = maize[, 1:3], cov = cov(res))
+s
+plot(s)
+```
+
+
+# Tocher's clustering
+
+Cluster analysis consists of arranging multivariate observations into homogeneous clusters. There are several algorithms for cluster analysis, with different outcomes and objective functions. Tocher's optimization method allows one to establish mutually exclusive clusters, with no need to define the number of clusters. It has been widely used in studies of genetic/phenotypic diversity that are based on cluster analysis. Furthermore, Tocher's method can be used to determine the number of clusters in dendrograms.
+
+Clusters are established according to an objective function that adopts an optimization criterion, which minimizes the average intra-cluster distance and maximizes the average inter-cluster distances (Silva \& Dias, 2013). **biotools** contains the method suggested by K.D. Tocher (Rao, 1952) for clustering objects, based on the algorithm:
+
+1. (Input) Take a distance matrix, let us say ${\bf d}$, of size $n$.
+2. Define a clustering criterion, that is, a limit of distance at which to evaluate the inclusion of objects in a cluster in formation. Usually, this criterion is defined as follows: let ${\bf m}$ be a vector of size $n$ containing the smallest distances involving each object, then take $\theta = \max{({\bf m})}$ to be the clustering criterion.
+3. Locate the pair of objects with the smallest distance in ${\bf d}$ to be the starting cluster.
+4. Compute the average distance ($d_{k(j)}$) of the starting cluster, say $k$, to a certain object, say $j$, that shows the smallest pairwise distance with each object in the starting cluster.
+5. Compare the statistic evaluated at the step 4 with $\theta$. Then, add the new object to the starting cluster if $d_{k(j)} \leq \theta$. Otherwise, go to step 3 not considering the objects already clustered and start a new cluster.
+
+The process continues until the last remaining object is evaluated and either included in the last cluster formed or allocated to a new cluster. The function `tocher()` performs optimization clustering and returns an object of class `tocher`, which contains the clusters formed, a numeric vector indicating the cluster of each object, a matrix of cluster distances and also the input - a class `dist` object.
+
+### Example
+The 20 individuals (observation) from the maize data set are to be clustered. First, we need to comput the Mahalanobis generalized squared distance among them.
+
+```{r}
+d <- D2.dist(data = maize[, 1:3], cov = cov(res))
+range(d)
+```
+
+Then Tocher's method can be applied to determine clusters. For that we are using modified method (sequential algorithm) by Vasconcelos et al. (2007) and the residual covariance matrix.
+
+```{r}
+toc <- tocher(d, algorithm = "sequential")
+toc
+```
+
+## Cluster distances
+
+After obtaining the clusters, it might be useful to know how divergent they are from each other. In this context, cluster distances are calculated from the original distance matrix through the function `distClust()`. An intracluster distance is calculated by averaging all pairwise distances among objects in the cluster concerned. Likewise, the distance between two clusters is calculated by averaging all pairwise distances among objects in these clusters.
+
+```{r digits=3}
+print(toc$distClust, digits = 2)
+```
+
+## Cophenetic correlation
+
+Clustering validation is widely applied for hierarchical and iterative methods. Some measures of internal validation for a Tocher's clustering outcome are implemented on biotools.
+
+The approach presented by Silva (2013) is implemented by taking the cluster distances in order to build a cophenetic matrix for clustering performed through the Tocher's method. Their approach consists of taking the cophenetic distance among objects located in the same cluster as the intracluster distance and the cophenetic distance between objects of different clusters as the intercluster distance. Then, the Pearson's correlation between the elements of the original and cophenetic matrix can be taken as a cophenetic correlation. The function to be called is `cophenetic()`, whose input is an object of class `tocher` and its output an object of class `dist`.
+
+```{r}
+cop <- cophenetic(toc)  # cophenetic matrix
+cor(d, cop)             # cophenetic correlation coefficient
+```
+
+## Mantel's test
+**Is that cophenetic correlation significantly greater than zero?** That quastion and others related to square matrix associations can be answered using Mantel's permutation test. 
+
+```{r}
+mantelTest(d, cop, nperm = 900)
+```
+
+# Discriminant analysis based on Mahalanobis distance
+
+A simple and efficient object classification rule is based on Mahalanobis distance. It consists of calculating the squared generalized Mahalanobis distances of each multivariate observation to the centre of each cluster. biotools performs this sort of discriminant analysis through `D2.disc()`, as follows: 
+
+Consider the $i$-th ($i = 1, 2, ..., n_j$) $p$-variate observation belonging to the $j$-th ($j = 1, 2, ..., k$) cluster, ${\bf x}_{ij}$. Let $\bar{{\bf x}}_{j'}$ be the vector of means of the $j'$-th ($j' = 1, 2, ..., k$) cluster. The Mahalanobis distance from this observation to the centre of this cluster is given by
+
+\[
+	D_{ij, j'}^2 = ({\bf x}_{ij} - \bar{{\bf x}}_{j'})^T {\hat{\Sigma}}_{pooled}^{-1} ({\bf x}_{ij} - \bar{{\bf x}}_{j'})
+\]
+
+\noindent where ${\hat{\Sigma}}_{pooled}$ is the estimate of the pooled covariance matrix for clusters.
+
+Now consider $C_j$ the random variable that represents the cluster at which the observation ${\bf x}_{ij}$ lies. The predicted class $\hat{C}_{j'}$ for this observation is the one such that
+
+\[
+	j' \Rightarrow \min_{j' = 1}^{k} ( D_{ij, j'}^2 ) 
+\]
+
+\noindent i.e., the object is allocated to the cluster whose distance from its centre is the smallest.
+
+The output is the Mahalanobis distances from each observation to the centre of each cluster, the pooled covariance matrix for clusters and the confusion matrix, which contains the number of correct classifications in the diagonal cells and misclassifications off-diagonal. In addition, a column misclass indicates (with an asterisk) where there was disagreement between the original classification (grouping) and the predicted one (pred).
+
+```{r}
+D2.disc(data = maize[, 1:3], 
+        grouping = maize$family, 
+        pooled.cov = cov(res))
+```
+
+# Miscellanea
+*biotools* also contains several other useful miscelaneous tools, such as the statistical tests for genetic covariance components, the exact test for seed lot heterogeneity, an approach for predicting spatial gene diversity and a function to perform path analysis dealing with collinearity. 
+
+# References
+Mantel, N. 1967. The detection of disease clustering and a generalized regression approach. Cancer Research 27:209–220. 
+
+Rao, C. R. 1952. Advanced statistical methods in biometric research. New York: John Wiley & Sons.
+
+Silva, A. R., and C. T. S. Dias. 2013. A cophenetic correlation coefficient for Tocher's method. Pesquisa Agropecuaria Brasileira 48: 589–96.
+
+Singh, D. 1981. The relative importance of characters affecting genetic divergence. Indian Journal Genetics and Plant Breeding 41: 237-45.
+
+Vasconcelos, E.S., Cruz, C.D., Bhering, L.L., Resende-Jr, M.F.R. 2007. Metodo Alternativo para Analise de Agrupamento. Pesquisa Agropecuaria Brasileira 42:1421-1428.

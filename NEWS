@@ -1,4 +1,10 @@
 ------------------------------------------------
+                version 4.2
+
+* Just a fix on loading message
+* A general vignette
+
+------------------------------------------------
                 version 4.1
 
 * New function: mvpaircomp()
