@@ -5,7 +5,7 @@
 
 <img align="right" src="docs/logo_biotools.gif" width="14%" height="14%">
 
-The package **biotools** has been developed for helping biologists, ecologists and researchers of related fields to perform optimization cluster analysis, specifically using Tocher's methods, as well as to evaluate the quality of the clustering. For this last purpose, some new and standard methodologies are supplied: the cophenetic correlation coefficient, Box's M-test for equality of covariance matrices and discriminant analysis based on Mahalanobis distance. These two latter can also be used upon clustering obtained with other methods, including the hierarchical ones.
+The package **biotools** has been developed for helping biologists, ecologists and researchers of related fields to perform optimization cluster analysis, specifically using Tocher's method, as well as to evaluate the quality of the clustering. For this last purpose, some new and standard methodologies are supplied: the cophenetic correlation coefficient, Box's M-test for equality of covariance matrices and discriminant analysis based on Mahalanobis distance. These two latter can also be used upon clustering obtained with other methods, including the hierarchical ones.
 
 Users can also find some other useful tools, such as a function for performing the well known Mantel's test and for computing its *simulated power*, a function that allows one to perform path analysis dealing with collinearity and a function for determining the minimum sample size in a very general way.
 
