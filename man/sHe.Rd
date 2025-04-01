@@ -12,8 +12,8 @@ dominant markers in individuals within a circular moving windows of known radius
 }
 
 \usage{
-sHe(x, coord.cols = 1:2, marker.cols = 3:4, 
-	marker.type = c("codominant", "dominant"), 
+sHe(x, coord.cols = 1:2, marker.cols = 3:4,
+	marker.type = c("codominant", "dominant"),
 	grid = NULL, latlong2km = TRUE, radius, nmin = NULL)
 }
 
@@ -48,15 +48,15 @@ A list of
 }
 
 \references{
-da Silva, A.R.; Malafaia, G.; Menezes, I.P.P. (2017) biotools: an R function to predict 
-   spatial gene diversity via an individual-based approach. \emph{Genetics and Molecular Research}, 
+da Silva, A.R.; Malafaia, G.; Menezes, I.P.P. (2017) biotools: an R function to predict
+   spatial gene diversity via an individual-based approach. \emph{Genetics and Molecular Research},
    \bold{16}: gmr16029655.
 
-Manel, S., Berthoud, F., Bellemain, E., Gaudeul, M., Luikart, G., Swenson, J.E., Waits, L.P., 
-	Taberlet, P.; Intrabiodiv Consortium. (2007) A new individual-based spatial approach for 
+Manel, S., Berthoud, F., Bellemain, E., Gaudeul, M., Luikart, G., Swenson, J.E., Waits, L.P.,
+	Taberlet, P.; Intrabiodiv Consortium. (2007) A new individual-based spatial approach for
 	identifying genetic discontinuities in natural populations. \emph{Molecular Ecology}, \bold{16}:2031-2043.
 
-Nei, M. (1978) Estimation of average heterozygozity and genetic distance from a small number of individuals. 
+Nei, M. (1978) Estimation of average heterozygozity and genetic distance from a small number of individuals.
 	\emph{Genetics}, \bold{89}: 583-590.
 }
 
@@ -71,7 +71,7 @@ Depending on the dimension of \code{x} and/or \code{grid}, \code{sHe()} can be t
 }
 
 \seealso{
-\code{\link{levelplot}}
+\code{\link[lattice]{levelplot}}
 }
 
 \examples{
@@ -97,11 +97,11 @@ points(Lat ~ Lon, data = moco, col = "blue", pch = 20)
 # ex2
 #
 # library(maps)
-# borders <- data.frame(x = map("world", "brazil")$x, 
+# borders <- data.frame(x = map("world", "brazil")$x,
 #	y = map("world", "brazil")$y)
 #
 # library(latticeExtra)
-# plot(ex2, xlab = "Lon", ylab = "Lat", 
+# plot(ex2, xlab = "Lon", ylab = "Lat",
 #	xlim = c(-75, -30), ylim = c(-35, 10), aspect = "iso") +
 #   latticeExtra::as.layer(xyplot(y ~ x, data = borders, type = "l")) +
 #   latticeExtra::as.layer(xyplot(Lat ~ Lon, data = moco))

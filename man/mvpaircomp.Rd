@@ -8,13 +8,13 @@ Multivariate Pairwise Comparisons
 
 \description{
 Performs pairwise comparisons of multivariate mean vectors of factor levels, overall or nested.
-The tests are run in the same spirt of \code{summary.manova()}, based on multivariate statistics such as Pillai's trace 
+The tests are run in the same spirt of \code{summary.manova()}, based on multivariate statistics such as Pillai's trace
 and Wilks' lambda, which can be applied to test multivariate contrasts.
 }
 
 \usage{
-mvpaircomp(model, factor1, nesting.factor = NULL, 
-   test = "Pillai", adjust = "none", SSPerror = NULL, DFerror = NULL) 
+mvpaircomp(model, factor1, nesting.factor = NULL,
+   test = "Pillai", adjust = "none", SSPerror = NULL, DFerror = NULL)
 
 \method{print}{mvpaircomp}(x, ...)
 }
@@ -29,7 +29,7 @@ mvpaircomp(model, factor1, nesting.factor = NULL,
 	F-test approximation. Default is \code{"Pillai"}. Other options are: \code{"Wilks"}, \code{"Hotelling-Lawley"} and \code{"Roy"}.
 	But they use to give very close results.}
   \item{adjust}{ a character string indicating the p-value adjustment method for multiple comparisons. Default is \code{"none"}.
-	See \code{\link{p.adjust}}}
+	See \code{\link[stats]{p.adjust}}}
   \item{SSPerror}{ optional; a numeric matrix representing the residual sum of squares and cross-products, to be used to compute the
 	multivariate statistics.}
   \item{DFerror}{ optional; a numeric value representing the residual degrees of freedom, to be used to compute the
@@ -48,7 +48,7 @@ An object of class \code{mvpaircomp}, a list of
 }
 
 \references{
-Krzanowski, W. J. (1988) \emph{Principles of Multivariate Analysis}. A User's Perspective. Oxford. 
+Krzanowski, W. J. (1988) \emph{Principles of Multivariate Analysis}. A User's Perspective. Oxford.
 }
 
 \author{
@@ -56,7 +56,7 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 }
 
 \seealso{
-\code{\link{manova}}
+\code{\link[stats]{manova}}
 }
 
 \examples{

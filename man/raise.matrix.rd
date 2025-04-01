@@ -27,7 +27,7 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 
 
 \seealso{
-\code{\link{eigen}}, \code{\link{svd}}
+\code{\link[base]{eigen}}, \code{\link[base]{svd}}
 }
 
 \examples{

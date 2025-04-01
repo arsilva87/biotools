@@ -1,8 +1,8 @@
 Package: biotools
 Type: Package
 Title: Tools for Biometry and Applied Statistics in Agricultural Science
-Version: 4.2
-Date: 2021-08-06
+Version: 4.3
+Date: 2025-04-01
 LazyLoad: yes
 LazyData: yes
 Authors@R: c(person(given = c("Anderson", "Rodrigo"),
@@ -14,7 +14,16 @@ Author: Anderson Rodrigo da Silva [aut, cre] (<https://orcid.org/0000-0003-2518-
 Maintainer: Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 Depends: MASS
 Imports: utils, stats, graphics, boot, grDevices, datasets
-Suggests: soilphysics, tkrplot, tcltk, rpanel, lattice, SpatialEpi, knitr, rmarkdown
+Suggests: 
+    soilphysics,
+    tkrplot,
+    tcltk,
+    rpanel,
+    lattice,
+    SpatialEpi,
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
 Description: Tools designed to perform and evaluate cluster analysis (including Tocher's algorithm), 
 	discriminant analysis and path analysis (standard and under collinearity), as well as some 
 	useful miscellaneous tools for dealing with sample size and optimum plot size calculations. 
@@ -26,3 +35,4 @@ License: GPL (>= 2)
 VignetteBuilder: knitr
 URL: https://arsilva87.github.io/biotools/
 BugReports: https://github.com/arsilva87/biotools/issues
+Config/testthat/edition: 3

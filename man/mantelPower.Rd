@@ -10,7 +10,7 @@ mantelPower(obj, effect.size = seq(0, 1, length.out = 50), alpha = 0.05)
 }
 
 \arguments{
-  \item{obj}{ an object of class "mantelTest". See \code{\link{mantelTest}}. }
+  \item{obj}{ an object of class "mantelTest". See \code{\link[biotools]{mantelTest}}. }
   \item{effect.size}{ numeric; the effect size specifying the alternative hypothesis.}
   \item{alpha}{ numeric; the significance level at which to compute the power level.}
 }
@@ -20,7 +20,7 @@ A data frame containing the effect size and its respective power level.
 }
 
 \references{
-Silva, A.R.; Dias, C.T.S.; Cecon, P.R.; Rego, E.R. (2015). An alternative procedure for performing a 
+Silva, A.R.; Dias, C.T.S.; Cecon, P.R.; Rego, E.R. (2015). An alternative procedure for performing a
 	power analysis of Mantel's test. \emph{Journal of Applied Statistics}, \bold{42}(9): 1984-1992.
 }
 
@@ -29,7 +29,7 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 }
 
 \seealso{
-\code{\link{mantelTest}}
+\code{\link[biotools]{mantelTest}}
 }
 
 \examples{
@@ -49,7 +49,7 @@ p10 <- mantelPower(mt1, alpha = 0.10)
 plot(p01, type = "l", col = 4)
 lines(p05, lty = 2, col = 4)
 lines(p10, lty = 3, col = 4)
-legend("bottomright", c("0.10", "0.05", "0.01"), 
+legend("bottomright", c("0.10", "0.05", "0.01"),
 	title = expression(alpha), col = 4, lty = 3:1, cex = 0.8)
 
 # End (Not run)

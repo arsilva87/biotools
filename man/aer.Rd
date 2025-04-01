@@ -28,7 +28,7 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 }
 
 \seealso{
-\code{\link{confusionmatrix}}, \code{\link{lda}}
+\code{\link[biotools]{confusionmatrix}}, \code{\link[MASS]{lda}}
 }
 
 \examples{

@@ -29,7 +29,7 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 }
 
 \seealso{
-\code{\link{aer}}, \code{\link{lda}}
+\code{\link[biotools]{aer}}, \code{\link[MASS]{lda}}
 }
 
 \examples{

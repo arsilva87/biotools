@@ -38,7 +38,7 @@ A list of
 \author{ Anderson Rodrigo da Silva <anderson.agro@hotmail.com> }
 
 \seealso{
-\code{\link{sample}}, \code{\link{creategroups}}
+\code{\link[base]{sample}}, \code{\link[biotools]{creategroups}}
 }
 
 \examples{

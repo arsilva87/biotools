@@ -13,8 +13,8 @@ optimumplotsize(a, b)
 }
 
 \arguments{
-  \item{a}{ a parameter estimate of the plot size model; see \code{\link{fitplotsize}}. }
-  \item{b}{ a parameter estimate of the plot size model; see \code{\link{fitplotsize}}. }
+  \item{a}{ a parameter estimate of the plot size model; see \code{\link[biotools]{fitplotsize}}. }
+  \item{b}{ a parameter estimate of the plot size model; see \code{\link[biotools]{fitplotsize}}. }
 }
 
 \value{
@@ -32,7 +32,7 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 }
 
 \seealso{
-\code{\link{fitplotsize}}
+\code{\link[biotools]{fitplotsize}}
 }
 
 \examples{

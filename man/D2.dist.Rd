@@ -34,7 +34,7 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 }
 
 \seealso{
-\code{\link{dist}}, \code{\link{singh}}
+\code{\link[stats]{dist}}, \code{\link[biotools]{singh}}
 }
 
 \examples{

@@ -28,5 +28,5 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 
 
 \seealso{
-\code{\link{tocher}}, \code{\link{dist}}
+\code{\link[biotools]{tocher}}, \code{\link[stats]{dist}}
 }

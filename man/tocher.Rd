@@ -22,20 +22,20 @@ by Silva \& Dias (2013).
 \arguments{
   \item{d}{ an object of class \code{"dist"}.}
   \item{algorithm}{ a character indicating the algorithm to be used for clustering objects.
-	It must be one of the two: \code{"original"} (default) or \code{"sequential"}. The latter is 
+	It must be one of the two: \code{"original"} (default) or \code{"sequential"}. The latter is
 	the method proposed by Vasconcelos et al. (2007), and sometimes called "modified" Tocher.}
   \item{x}{ an object of class \code{"tocher"}.}
   \item{\dots}{ optional further arguments from \code{print}.}
 }
 
 \value{
-An object of class \code{tocher}. A list of 
+An object of class \code{tocher}. A list of
   \item{call }{the call which produced the result.}
   \item{algorithm }{character; the algorithm that has been used as input.}
   \item{clusters }{a list of length \emph{k} (the number of clusters),
 	 containing the labels of the objects in \code{d} for each cluster.}
   \item{class }{a numeric vector indicating the class (the cluster) of each object in \code{d}.}
-  \item{criterion }{a numeric vector containing the clustering criteria - the greatest amongst 
+  \item{criterion }{a numeric vector containing the clustering criteria - the greatest amongst
 	the smallest distances involving each object in \code{d}. If \code{algorithm = "original"},
 	this vector contains an unique value, i.e., the same criterion is used for every clustering step.}
   \item{distClust }{a matrix of distances within (diagonal) and between (off-diagonal) clusters.}
@@ -55,9 +55,9 @@ Sharma, J.R. (2006) \emph{Statistical and biometrical techniques in plant breedi
    Delhi: New Age International.
 
 Silva, A.R. & Dias, C.T.S. (2013) A cophenetic correlation coefficient for
-   Tocher's method. \emph{Pesquisa Agropecuaria Brasileira}, 48:589-596. 
+   Tocher's method. \emph{Pesquisa Agropecuaria Brasileira}, 48:589-596.
 
-Vasconcelos, E.S.; Cruz, C.D.; Bhering, L.L.; Resende Junior, M.F.R. (2007) Alternative 
+Vasconcelos, E.S.; Cruz, C.D.; Bhering, L.L.; Resende Junior, M.F.R. (2007) Alternative
    methodology for the cluster analysis. \emph{Pesquisa Agropecuaria Brasileira}, 42:1421-1428.
 }
 
@@ -66,7 +66,7 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 }
 
 \seealso{
-\code{\link{dist}}, \code{\link{D2.dist}}, \code{\link{cophenetic}}, \code{\link{distClust}}, \code{\link{hclust}}
+\code{\link[stats]{dist}}, \code{\link[biotools]{D2.dist}}, \code{\link[stats]{cophenetic}}, \code{\link[biotools]{distClust}}, \code{\link[stats]{hclust}}
 }
 
 \examples{

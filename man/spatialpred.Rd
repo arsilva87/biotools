@@ -6,7 +6,7 @@ Spatial Predictions Based on the Circular Variable-Radius Moving Window Method
 }
 
 \description{
-A heuristic method to perform spatial predictions. The method consists of a local interpolator with stochastic features. 
+A heuristic method to perform spatial predictions. The method consists of a local interpolator with stochastic features.
 It allows to build effective detailed maps and to estimate the spatial dependence without any assumptions on the spatial process.
 }
 
@@ -29,7 +29,7 @@ If \code{grid} receives the same input as \code{coords}, \code{spatialpred} will
 }
 
 \references{
-Da Silva, A.R., Silva, A.P.A., Tiago-Neto, L.J. (2020) A new local stochastic method for predicting data with spatial heterogeneity. 
+Da Silva, A.R., Silva, A.P.A., Tiago-Neto, L.J. (2020) A new local stochastic method for predicting data with spatial heterogeneity.
 	\emph{ACTA SCIENTIARUM-AGRONOMY}, \bold{43}:e49947.
 }
 
@@ -42,12 +42,12 @@ Depending on the dimension of \code{coords} and/or \code{grid}, \code{spatialpre
 }
 
 \seealso{
-\code{\link{sHe}}
+\code{\link[biotools]{sHe}}
 }
 
 \examples{
 # data(moco)
-# p <- spatialpred(coords = moco[, 1:2], data = rnorm(206), grid = moco[, 1:2]) 
+# p <- spatialpred(coords = moco[, 1:2], data = rnorm(206), grid = moco[, 1:2])
 # note: using coords as grid to calculate PAME
 # head(p)
 # lattice::levelplot(pred ~ Lat*Lon, data = p)

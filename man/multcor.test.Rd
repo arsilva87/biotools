@@ -17,7 +17,7 @@ multcor.test(x, n = NULL, Df = NULL,
 
 \arguments{
   \item{x}{ a correlation matrix.}
-  \item{n}{ the number of observations; if \code{NULL} (default), the argument 
+  \item{n}{ the number of observations; if \code{NULL} (default), the argument
 	\code{Df} must be passed.}
   \item{Df}{ the number of degrees of freedom of the t statistic; if \code{NULL} (default),
 	the argument \code{n} must be passed and, in this case, \code{multcor.test}
@@ -28,12 +28,12 @@ multcor.test(x, n = NULL, Df = NULL,
 	The default is "two.sided".}
   \item{adjust}{ The adjustment method for multiple tests. It must be one of
 	"holm", "hochberg", "hommel", "bonferroni", "BH", "BY", "fdr",
-	"none" (default). For more information, see \code{\link{p.adjust}}.}
+	"none" (default). For more information, see \code{\link[stats]{p.adjust}}.}
 }
 
 
 \value{
-A list with class "multcor.test" containing the following components: 
+A list with class "multcor.test" containing the following components:
   \item{t.values }{the t-value calculated for each correlation.}
   \item{p.values }{the p.value for each t-test, adjusted for multiple tests.}
   \item{p.check }{a matrix containing the \code{p.values} for each t-test (lower triangular)
@@ -50,7 +50,7 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 }
 
 \seealso{
-\code{\link{cor}}, \code{\link{cor.test}}, \code{\link{p.adjust}}
+\code{\link[stats]{cor}}, \code{\link[stats]{cor.test}}, \code{\link[stats]{p.adjust}}
 }
 
 \examples{

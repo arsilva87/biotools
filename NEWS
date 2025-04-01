@@ -1,4 +1,9 @@
 ------------------------------------------------
+                version 4.3
+
+* Documentation fixes
+
+------------------------------------------------
                 version 4.2
 
 * Just a fix on loading message
@@ -34,7 +39,7 @@
                 version 2.2
 
 * Documentation fixes
-* new function: gencovtest(), for testing genetic 
+* new function: gencovtest(), for testing genetic
 	component of covariance
 * new data set: maize
 * S3 method for the class tocher
@@ -68,9 +73,9 @@
                 version 1.2
 
 * Documentation fixes
-* S3 print method for classes: 'boxM', 'creategroups', 
+* S3 print method for classes: 'boxM', 'creategroups',
 	'pathanalysis', 'singh' and 'tocher'
-* New functions: multcor.test(), findSubsample() and 
+* New functions: multcor.test(), findSubsample() and
 	D2.disc()
 
 ------------------------------------------------

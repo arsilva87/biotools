@@ -9,7 +9,7 @@ for determining the optimum plot size as a function of the experimental
 coefficient of variation (CV) or as a function of the residual standard error.
 \deqn{CV = a * plotsize ^ {-b}.}
 It creates initial estimates of the parameters \emph{a} and \emph{b} by log-linearization
-and uses them to provide its least-squares estimates via \code{\link{nls}}.
+and uses them to provide its least-squares estimates via \code{\link[stats]{nls}}.
 }
 
 \usage{
@@ -22,7 +22,7 @@ fitplotsize(plotsize, CV)
 }
 
 \value{
-A \code{\link{nls}} output.
+A \code{\link[stats]{nls}} output.
 }
 
 \references{
@@ -36,7 +36,7 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 }
 
 \seealso{
-\code{\link{optimumplotsize}}
+\code{\link[biotools]{optimumplotsize}}
 }
 
 \examples{

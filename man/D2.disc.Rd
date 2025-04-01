@@ -7,7 +7,7 @@
 \title{Discriminant Analysis Based on Mahalanobis Distance}
 
 \description{
-A function to perform discriminant analysis based on the squared 
+A function to perform discriminant analysis based on the squared
 generalized Mahalanobis distance (D2) of the observations to the center of the groups.
 }
 
@@ -23,7 +23,7 @@ generalized Mahalanobis distance (D2) of the observations to the center of the g
   \item{pooled.cov}{a \code{grouping}-pooled covariance matrix (\emph{p x p}). If \code{NULL}
 	(default), \code{D2.disc} will automatically compute a pooled covariance matrix.}
   \item{x, object}{ an object of class \code{"D2.disc"}.}
-  \item{newdata}{ numeric \code{data.frame} or \code{matrix} of observations to be classified. 
+  \item{newdata}{ numeric \code{data.frame} or \code{matrix} of observations to be classified.
 	If \code{NULL} (default), the input data used as argument in \code{D2.disc} will be used.}
   \item{\dots}{ further arguments.}
 }
@@ -38,20 +38,20 @@ A list of
 	chacater vector indicating where the misclassification has occured.}
   \item{means }{a matrix containing the vector of means of each class in \code{grouping}.}
   \item{pooled }{the pooled covariance matrix.}
-  \item{confusion.matrix }{an object of class \code{\link{confusionmatrix}}.}
+  \item{confusion.matrix }{an object of class \code{\link[biotools]{confusionmatrix}}.}
 }
 
 \references{
 Manly, B.F.J. (2004) \emph{Multivariate statistical methods}: a primer. CRC Press. (p. 105-106).
 
-Mahalanobis, P.C. (1936) On the generalized distance in statistics. 
+Mahalanobis, P.C. (1936) On the generalized distance in statistics.
 	\emph{Proceedings of The National Institute of Sciences of India}, 12:49-55.
 }
 
 \author{Anderson Rodrigo da Silva <anderson.agro@hotmail.com>}
 
 \seealso{
-\code{\link{D2.dist}}, \code{\link{confusionmatrix}}, \code{\link{lda}}
+\code{\link[biotools]{D2.dist}}, \code{\link[biotools]{confusionmatrix}}, \code{\link[MASS]{lda}}
 }
 
 \examples{

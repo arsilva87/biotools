@@ -18,9 +18,9 @@ cov2pcov(m, vars1, vars2 = seq(1, ncol(m))[-vars1])
 
 \arguments{
   \item{m}{ a square numeric matrix.}
-  \item{vars1}{ a numeric vector indicating the position (rows or columns in \code{m}) of the set of variables 
+  \item{vars1}{ a numeric vector indicating the position (rows or columns in \code{m}) of the set of variables
 	at which to compute the partial covariance matrix.}
-  \item{vars2}{ a numeric vector indicating the position (rows or columns in \code{m}) of the set of variables 
+  \item{vars2}{ a numeric vector indicating the position (rows or columns in \code{m}) of the set of variables
 	at which to adjust the partial covariance matrix.}
 }
 
@@ -31,7 +31,7 @@ Anderson Rodrigo da Silva <anderson.agro at hotmail.com>
 }
 
 \seealso{
-\code{\link{cov}}
+\code{\link[stats]{cov}}
 }
 
 \examples{

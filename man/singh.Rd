@@ -40,7 +40,7 @@ Anderson Rodrigo da Silva <anderson.agro@hotmail.com>
 }
 
 \seealso{
-\code{\link{D2.dist}}
+\code{\link[biotools]{D2.dist}}
 }
 
 \examples{
