@@ -10,7 +10,7 @@
 \description{
 \code{tocher} performs the Tocher (Rao, 1952) optimization clustering from a distance matrix.
 The cophenetic distance matrix for a Tocher's clustering can also be computed using the methodology proposed
-by Silva \& Dias (2013).
+by Silva and Dias (2013).
 }
 
 \usage{
@@ -49,12 +49,12 @@ Cruz, C.D.; Ferreira, F.M.; Pessoni, L.A. (2011) \emph{Biometria aplicada ao est
    da diversidade genetica}. Visconde do Rio Branco: Suprema.
 
 Rao, R.C. (1952) \emph{Advanced statistical methods in biometric research}.
-   New York: John Wiley & Sons.
+   New York: John Wiley and Sons.
 
 Sharma, J.R. (2006) \emph{Statistical and biometrical techniques in plant breeding}.
    Delhi: New Age International.
 
-Silva, A.R. & Dias, C.T.S. (2013) A cophenetic correlation coefficient for
+Silva, A.R.; Dias, C.T.S. (2013) A cophenetic correlation coefficient for
    Tocher's method. \emph{Pesquisa Agropecuaria Brasileira}, 48:589-596.
 
 Vasconcelos, E.S.; Cruz, C.D.; Bhering, L.L.; Resende Junior, M.F.R. (2007) Alternative
